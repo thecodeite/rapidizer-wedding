@@ -1,0 +1,17 @@
+<ul>
+    
+    <% _.each(models, function(WeddingInvite, i){ %>
+        <% var weddinginvite =  WeddingInvite.toJSON(); %>
+        <li>
+            <%=weddinginvite.Name %>
+            <%=weddinginvite.Email %>
+            <%=weddinginvite.MobileNumber %>
+            <%=weddinginvite.Address %>
+            <%=weddinginvite.Attendance %>
+            <%=weddinginvite.SpecialRequirements %>
+            <%=weddinginvite.NameOfGuest %>
+            <a href="<%= '#ViewWeddingInvite/' + weddinginvite.id %>">View</a>
+            <a href="<%= '#EditWeddingInvite/' + weddinginvite.id %>">Edit</a>
+        </li>
+    <% }); %>
+</ul>
